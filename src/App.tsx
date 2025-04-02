@@ -952,10 +952,6 @@ const translations = {
     en: "Draw Again",
     zh: "再抽一次",
   },
-  chooseCard: {
-    en: "Choose one card to reveal",
-    zh: "選擇一張卡片來翻開",
-  },
   home: {
     en: "Return Home",
     zh: "返回首頁",
@@ -1084,9 +1080,7 @@ function App() {
                 >
                   <div className="flip-card-inner">
                     <div className="flip-card-front">
-                      <div className="w-full h-full bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl shadow-xl flex items-center justify-center">
-                        <Flower className="text-white w-12 h-12 opacity-60" />
-                      </div>
+                      <div className="aspect-[3/4] bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg shadow-xl flex items-center justify-center"></div>
                     </div>
                     <div className="flip-card-back">
                       <div

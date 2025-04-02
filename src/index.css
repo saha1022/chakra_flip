@@ -7,16 +7,12 @@
   transform-style: preserve-3d;
 }
 
-/* 卡片 hover 放大效果 */
-.flip-card:hover .flip-card-inner {
-  transform: scale(1.05);
-}
 
 .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.8s;
+  transition: transform 1s;
   transform-style: preserve-3d;
   transform-origin: center;   /* 旋轉基於中心點 */
 }
@@ -34,7 +30,7 @@
 }
 
 .flip-card-front {
-  width: 30%;  /* 初始較小 */
+  width: 15%;  /* 初始較小 */
 }
 
 .flip-card-back {
@@ -50,32 +46,33 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  overflow-x: hidden; /* 限制水平溢出 */
 }
 
 .manual-card {
   position: absolute;
   width: 100%; 
   height: 250px;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
   opacity: 1;
 }
 
 
 /* 抽卡位置 */
 .manual-card:nth-child(1) {
-  transform: translate(0%, 0%);
+  transform: translate(5%, 0%);
 }
 .manual-card:nth-child(2) {
-  transform: translate(17%, 0%);
+  transform: translate(23.75%, 0%);
 }
 .manual-card:nth-child(3) {
-  transform: translate(34%, 0%);
+  transform: translate(42.5%, 0%);
 }
 .manual-card:nth-child(4) {
-  transform: translate(51%, 0%);
+  transform: translate(61.25%, 0%);
 }
 .manual-card:nth-child(5) {
-  transform: translate(70%, 0%);
+  transform: translate(80%, 0%);
 }
 
 /* 當卡片被翻轉後，校正位移 */
@@ -95,10 +92,10 @@
   transform: translate(0%, 0%);
 }
 
-
 /* 當卡片被選中時，讓其他卡片淡出 */
 .manual-card.fading {
   opacity: 0;
+  display: none;
   pointer-events: none;
 }
 
